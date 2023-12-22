@@ -5,7 +5,7 @@ Gamified ecological sustainability.
 Fighting climate change requires colossal efforts across the globe. Impact by individual contributors is limited, which can be demotivating. 
 GreenChallenge remedies this by combining the efforts of contributors across the world, creating a grass-roots movement to bring about the necessary change.
 
-## Concept
+## Functional Concept
 At the core, players are encouraged to solve one "challenge" per day.
 
 ### Challenges
@@ -32,3 +32,36 @@ Gamification elements to be used are:
 1. leaderboards for **social comparison**
 1. group activities for **social** effects
 1. (badges as elements of extrinsic rewards)
+
+## Implementation Concept
+
+Layered architecture of database <> server <> clients.
+
+### Concept Dictionary
+**Challenge**: An action that many players across the world should perform. Can be signing a petition, donating for a cause, going to a demonstration or sharing a post on facebook.
+
+**Daily Challenge**: The specific challenge that is to be performed on a given day.
+
+**Player**: Everybody with an account who will solve challenges.
+
+**Player Action**: The action a player took to solve a challenge.
+
+### Database
+A simple database of challenges, players and player actions.
+
+Tables:
+* challenges_tbl: 
+* daily_challenges_tbl:
+* players_tbl:
+* player_actions_tbl:
+
+### Server
+Responsible for communication between clients and database. Provides the common business logic for actions.
+
+### Clients
+Platform-specific clients (bots and UIs) for:
+* Discord
+* Twitter / X
+* Mastodon
+* Slack
+* Internet
