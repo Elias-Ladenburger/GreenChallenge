@@ -50,7 +50,7 @@ Layered architecture of database <> server <> clients.
 A simple database of challenges, players and player actions.
 
 Tables:
-* challenges_tbl: 
+* challenges_tbl: id, short_name, description, link
 * daily_challenges_tbl:
 * players_tbl:
 * player_actions_tbl:
